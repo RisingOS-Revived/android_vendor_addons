@@ -26,6 +26,12 @@
     <allow-ignore-location-settings package="com.google.android.gms" attributionTag="com.google.android.gms.thunderbird" />
     <allow-ignore-location-settings package="com.google.android.dialer" attributionTag="*" />
 
+    <!-- SCONE must get device location for satellite emergency communications. -->
+    <allow-ignore-location-settings package="com.google.android.apps.scone" attributionTag="satellite_esos" />
+
+    <!-- Satellite access controller must get device location for satellite emergency communications. -->
+    <allow-ignore-location-settings package="com.android.phone" attributionTag="telephony" />
+
     <!-- OobConfig must always have network access to fetch enterprise and carrier lock config. -->
     <allow-in-power-save-except-idle package="com.google.android.apps.work.oobconfig" />
     <allow-in-data-usage-save package="com.google.android.apps.work.oobconfig" />
@@ -60,6 +66,10 @@
     <allow-in-power-save package="com.google.android.ims" />
     <allow-in-data-usage-save package="com.google.android.ims" />
 
+    <!-- Allow SetupWizard keeping at unrestricted mode of Battery usage. -->
+    <bg-restriction-exemption package="com.google.android.setupwizard"/>
+    <bg-restriction-exemption package="com.google.android.apps.setupwizard.searchselector"/>
+
     <!-- These Google applications all handle URLs to their websites by default -->
 
     <!-- Apps below are required on all GMS devices -->
@@ -91,21 +101,34 @@
         service="com.google.android.gms/.backup.BackupTransportService" />
     <backup-transport-whitelisted-service
         service="com.google.android.gms/.backup.component.D2dTransportService" />
+    <backup-transport-whitelisted-service
+        service="com.google.android.apps.restore/.transport.BackupTransportService" />
+    <backup-transport-whitelisted-service
+        service="com.google.android.apps.restore/.transport.D2dTransportService" />
+
 
     <!-- Specify the explicit set of other applications that AI services are allowed to
          interact with, including the providers that back the implementation of the APIs
          provided by the package. -->
     <allow-association target="com.google.android.as" allowed="com.android.bluetooth" />
+    <allow-association target="com.google.android.as" allowed="com.android.bluetooth.services" />
     <allow-association target="com.google.android.as" allowed="com.android.providers.contacts" />
     <allow-association target="com.google.android.as" allowed="com.android.providers.media" />
     <allow-association target="com.google.android.as" allowed="com.android.providers.telephony" />
     <allow-association target="com.google.android.as" allowed="com.android.systemui" />
+    <allow-association target="com.google.android.as" allowed="com.google.android.bluetooth" />
+    <allow-association target="com.google.android.as" allowed="com.google.android.bluetooth.services" />
     <allow-association target="com.google.android.as" allowed="com.google.android.providers.media.module" />
     <!-- AI services can bind to its open-source network component. -->
     <allow-association target="com.google.android.as" allowed="com.google.android.as.oss" />
 
-    <!-- AI services open-source network component can only bind back to the core package. -->
+    <!-- AI services open-source network component can bind back to the core package. -->
     <allow-association target="com.google.android.as.oss" allowed="com.google.android.as" />
+    <!-- AI services open-source network component can bind to AI Core. -->
+    <allow-association target="com.google.android.as.oss" allowed="com.google.android.aicore" />
+
+    <!-- Pixel Launcher can bind to the open-source network component. -->
+    <allow-association target="com.google.android.as.oss" allowed="com.google.android.apps.nexuslauncher" />
 
     <!-- Specify the explicit set of other applications whose app data directories are
         accessible by other applications. -->
@@ -113,4 +136,23 @@
 
     <!-- Whitelist of packages that eligible for rollback -->
     <rollback-whitelisted-app package="com.android.vending" />
+    <rollback-whitelisted-app package="com.google.android.gms" />
+
+    <!-- Specify the installer eligiable for updating the given GMS package. -->
+    <update-ownership package="com.google.android.gms" installer="com.android.vending" />
+
+    <!-- Denylist of packages that are not eligible for automatic rollback -->
+    <automatic-rollback-denylisted-app package="com.android.vending" />
+    <automatic-rollback-denylisted-app package="com.google.android.gms" />
+
+    <!-- Allow device lock controller app to schedule jobs and alarms, and have network access when app
+         in background; otherwise, it may not be able to enforce provision for managed devices. -->
+    <allow-in-power-save package="com.google.android.devicelockcontroller" />
+    <allow-in-data-usage-save package="com.google.android.devicelockcontroller" />
+
+
+    <!-- These packages are part of Remote Key Provisioning and are allowed to always have
+         internet access while in power save mode, or in data saver mode. -->
+    <allow-in-power-save package="com.google.android.rkpdapp" />
+    <allow-in-data-usage-save package="com.google.android.rkpdapp" />
 </config>
