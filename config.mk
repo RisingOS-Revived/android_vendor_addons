@@ -431,7 +431,8 @@ PRODUCT_PACKAGES += \
 # Hide IME space
 PRODUCT_PACKAGES += \
     GesturalNavigationNarrowSpace \
-    GesturalNavigationNoSpace
+    GesturalNavigationNoSpace \
+    GesturalNavigationHidden
 
 # Progress Bar Themes
 PRODUCT_PACKAGES += \
