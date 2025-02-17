@@ -6,27 +6,22 @@
         <layer-list>
             <item android:gravity="fill_horizontal|center">
                 <shape android:shape="rectangle">
-                    <corners
-                        android:bottomLeftRadius="10.0dp"
-                        android:bottomRightRadius="32.0dp"
-                        android:topLeftRadius="32.0dp"
-                        android:topRightRadius="10.0dp" />
+                    <corners android:radius="24.0dip" />
                     <size android:height="48.0dip" />
-                    <solid android:color="#1A000000" />
+                    <solid android:color="@*android:color/system_neutral2_800" />
                 </shape>
             </item>
             <item
-                android:end="4.5dip"
                 android:gravity="fill_horizontal|center"
-                android:start="4.5dip">
+                android:start="4.5dip"
+                android:end="4.5dip">
                 <shape android:shape="rectangle">
-                    <corners
-                        android:bottomLeftRadius="6.0dp"
-                        android:bottomRightRadius="28.0dp"
-                        android:topLeftRadius="28.0dp"
-                        android:topRightRadius="6.0dp" />
+                    <corners android:radius="20.0dip" />
                     <size android:height="40.0dip" />
-                    <solid android:color="?android:colorBackgroundFloating" />
+                    <gradient
+                        android:centerColor="#00000000"
+                        android:endColor="#00000000"
+                        android:startColor="#1A000000" />
                 </shape>
             </item>
         </layer-list>

@@ -5,7 +5,7 @@
         <shape android:shape="rectangle">
             <corners android:radius="28.0dip" />
             <size android:height="48.0dip" />
-            <solid android:color="@*android:color/surface_light" />
+            <solid android:color="@android:color/system_neutral1_800" />
         </shape>
     </item>
     <item android:gravity="fill_horizontal|center" android:id="@android:id/progress">

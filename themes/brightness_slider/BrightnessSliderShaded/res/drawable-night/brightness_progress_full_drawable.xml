@@ -3,7 +3,7 @@
     <item
         android:id="@null"
         android:gravity="fill_horizontal|center">
-        <shape android:shape="rectangle" android:tintMode="src_atop">
+        <shape android:shape="rectangle" android:tintMode="multiply">
             <corners android:radius="24.0dip" />
             <size android:height="48.0dip" />
             <solid android:color="?android:colorAccent" />
