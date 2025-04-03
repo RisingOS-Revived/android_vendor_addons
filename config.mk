@@ -14,24 +14,29 @@
 LOCAL_PATH := $(call my-dir)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
-ifeq ($(TARGET_HAS_UDFPS),true)
+ADDONS_PATH := vendor/addons
+
+# Game Props
+TARGET_PRODUCT_PROP += $(ADDONS_PATH)/gameprops/product.prop
+
+# Accord
+TARGET_INCLUDE_ACCORD ?= true
+ifeq ($(TARGET_INCLUDE_ACCORD),true)
 PRODUCT_PACKAGES += \
-    UdfpsIcons \
-    UdfpsAnimations
+    Accord
 endif
 
-PRODUCT_COPY_FILES += \
-    vendor/addons/prebuilt/product/etc/permissions/com.android.angle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.angle.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/contextual_search.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/contextual_search.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/dialer_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/dialer_experience.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/google_build.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google_build.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/nexus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nexus.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/nga.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nga.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/preinstalled-packages-product-pixel-2017-and-newer.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-product-pixel-2017-and-newer.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/preinstalled-packages-product-pixel-2018-and-newer.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-product-pixel-2018-and-newer.xml \
-    vendor/addons/prebuilt/product/etc/sysconfig/preinstalled-packages-product-pixel-2019-and-newer.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-product-pixel-2019-and-newer.xml
+# Clocks (SystemUI)
+PRODUCT_PACKAGES += \
+    SystemUIClocks-BigNum \
+    SystemUIClocks-Calligraphy \
+    SystemUIClocks-Flex \
+    SystemUIClocks-Growth \
+    SystemUIClocks-Inflate \
+    SystemUIClocks-Metro \
+    SystemUIClocks-NumOverlap \
+    SystemUIClocks-Weather
+
 
 # QS layout
 PRODUCT_PACKAGES += \
@@ -151,6 +156,7 @@ PRODUCT_PACKAGES += \
     ClockFontPlaidEventOverlay \
     ClockFontPlantsLettersOverlay \
     ClockFontPlayOverlay \
+    ClockFontPoppinsSourceOverlay \
     ClockFontQuandoOverlay \
     ClockFontQuickSouthOverlay \
     ClockFontRedressedOverlay \
@@ -177,6 +183,7 @@ PRODUCT_PACKAGES += \
     ClockFontSlimOverlay \
     ClockFontNtype82Overlay \
     ClockFontSubwayOverlay \
+    ClockFontMotorola \
     FontAccuratistOverlay \
     FontAclonicaOverlay \
     FontAmaranteOverlay \
@@ -186,10 +193,14 @@ PRODUCT_PACKAGES += \
     FontComfortaaOverlay \
     FontComicSansOverlay \
     FontCookieRunOverlay \
+    FontCooljazzOverlay \
     FontCoolstoryOverlay \
     FontExotwoOverlay \
+    FontEvoSansOverlay \
+    FontEvolveSansOverlay \
     FontFifa2018Overlay \
     FontGrandHotelOverlay \
+    FontGeneralSansOverlay \
     FontHarmonySansOverlay \
     FontLatoOverlay \
     FontLinotteOverlay \
@@ -197,62 +208,55 @@ PRODUCT_PACKAGES += \
     FontNothingDotHeadlineOverlay \
     FontNothingDotOverlay \
     FontNunitoOverlay \
+    FontOneUISansOverlay \
     FontOneplusSansOverlay \
     FontOneplusSlateOverlay \
+    FontPoppinsSourceOverlay \
     FontOswaldOverlay \
     FontPlayOverlay \
     FontQuandoOverlay \
     FontRedressedOverlay \
     FontReemKufiOverlay \
     FontRobotoCondensedOverlay \
+    FontRookeryOverlay \
     FontRubikOverlay \
-    FontSanFranciscoDisplayProSourceOverlay \
     FontSamsungOneOverlay \
+    FontSanFranciscoDisplayProSourceOverlay \
     FontSansSerifOverlay \
+    FontSansSerifProOverlay \
     FontSonySketchOverlay \
     FontStoropiaOverlay \
     FontSurferOverlay \
     FontUbuntuOverlay \
-    ClockFontMotorola \
-    FontRookeryOverlay
+    FontVolteOverlay
 
 # Icon Packs
 PRODUCT_PACKAGES += \
+    IconPackAcherusAndroidOverlay \
+    IconPackAcherusLauncherOverlay \
+    IconPackAcherusSettingsOverlay \
+    IconPackAcherusSystemUIOverlay \
+    IconPackAuroraAndroidOverlay \
+    IconPackAuroraSystemUIOverlay \
     IconPackCircularAndroidOverlay \
     IconPackCircularLauncherOverlay \
     IconPackCircularSettingsOverlay \
     IconPackCircularSystemUIOverlay \
     IconPackCircularThemePickerOverlay \
-    IconPackVictorAndroidOverlay \
-    IconPackVictorLauncherOverlay \
-    IconPackVictorSettingsOverlay \
-    IconPackVictorSystemUIOverlay \
-    IconPackVictorThemePickerOverlay \
-    IconPackSamAndroidOverlay \
-    IconPackSamLauncherOverlay \
-    IconPackSamSettingsOverlay \
-    IconPackSamSystemUIOverlay \
-    IconPackSamThemePickerOverlay \
-    IconPackKaiAndroidOverlay \
-    IconPackKaiLauncherOverlay \
-    IconPackKaiSettingsOverlay \
-    IconPackKaiSystemUIOverlay \
-    IconPackKaiThemePickerOverlay \
     IconPackFilledAndroidOverlay \
     IconPackFilledLauncherOverlay \
     IconPackFilledSettingsOverlay \
     IconPackFilledSystemUIOverlay \
     IconPackFilledThemePickerOverlay \
-    IconPackPUIAndroidOverlay \
-    IconPackPUILauncherOverlay \
-    IconPackPUISettingsOverlay \
-    IconPackPUISystemUIOverlay \
-    IconPackPUIThemePickerOverlay \
-    IconPackRoundedAndroidOverlay \
-    IconPackRoundedLauncherOverlay \
-    IconPackRoundedSettingsOverlay \
-    IconPackRoundedSystemUIOverlay \
-    IconPackRoundedThemePickerOverlay \
+    IconPackGradiconAndroidOverlay \
+    IconPackGradiconSystemUIOverlay \
+    IconPackKaiAndroidOverlay \
+    IconPackKaiLauncherOverlay \
+    IconPackKaiSettingsOverlay \
+    IconPackKaiSystemUIOverlay \
+    IconPackKaiThemePickerOverlay \
+    IconPackLornAndroidOverlay \
+    IconPackLornSystemUIOverlay \
     IconPackNostalgicAndroidOverlay \
     IconPackNostalgicLauncherOverlay \
     IconPackNostalgicSettingsOverlay \
@@ -267,18 +271,28 @@ PRODUCT_PACKAGES += \
     IconPackOutlineLauncherOverlay \
     IconPackOutlineSettingsOverlay \
     IconPackOutlineSystemUIOverlay \
-    IconPackAcherusAndroidOverlay \
-    IconPackAcherusLauncherOverlay \
-    IconPackAcherusSettingsOverlay \
-    IconPackAcherusSystemUIOverlay \
-    IconPackAuroraAndroidOverlay \
-    IconPackAuroraSystemUIOverlay \
-    IconPackGradiconAndroidOverlay \
-    IconPackGradiconSystemUIOverlay \
-    IconPackLornAndroidOverlay \
-    IconPackLornSystemUIOverlay \
-    IconPackPlumpySystemUIOverlay \
+    IconPackPUIAndroidOverlay \
+    IconPackPUILauncherOverlay \
+    IconPackPUISettingsOverlay \
+    IconPackPUISystemUIOverlay \
+    IconPackPUIThemePickerOverlay \
     IconPackPlumpyAndroidOverlay \
+    IconPackPlumpySystemUIOverlay \
+    IconPackRoundedAndroidOverlay \
+    IconPackRoundedLauncherOverlay \
+    IconPackRoundedSettingsOverlay \
+    IconPackRoundedSystemUIOverlay \
+    IconPackRoundedThemePickerOverlay \
+    IconPackSamAndroidOverlay \
+    IconPackSamLauncherOverlay \
+    IconPackSamSettingsOverlay \
+    IconPackSamSystemUIOverlay \
+    IconPackSamThemePickerOverlay \
+    IconPackVictorAndroidOverlay \
+    IconPackVictorLauncherOverlay \
+    IconPackVictorSettingsOverlay \
+    IconPackVictorSystemUIOverlay \
+    IconPackVictorThemePickerOverlay \
     IconPackXperiaAndroidOverlay \
     IconPackXperiaSettingsOverlay \
     IconPackXperiaSystemUIOverlay
@@ -301,10 +315,114 @@ PRODUCT_PACKAGES += \
     IconShapeStretchedOverlay \
     IconShapeSquareOverlay \
     IconShapeSquircleOverlay \
-    IconShapeStretchedOverlay \
     IconShapeTaperedRectOverlay \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay
+
+# Signal Icons
+PRODUCT_PACKAGES += \
+    AiirOSignalOverlay \
+    AquariumSignalOverlay \
+    AuroraSignalOverlay \
+    BananaSignalOverlay \
+    BarsSignalOverlay \
+    BoldSignalOverlay \
+    ButterflySignalOverlay \
+    CapsuleSignalOverlay \
+    CircleSignalOverlay \
+    DaunSignalOverlay \
+    DecSignalOverlay \
+    DeepSignalOverlay \
+    DoraSignalOverlay \
+    DottedSignalOverlay \
+    EqualSignalOverlay \
+    FaintUISignalOverlay \
+    FanSignalOverlay \
+    ForlornSignalOverlay \
+    GlummySignalOverlay \
+    GradiconSignalOverlay \
+    HeartbeatSignalOverlay \
+    HollowSignalOverlay \
+    HuaweiSignalOverlay \
+    IOSSignalOverlay \
+    InsideSignalOverlay \
+    IosSignalOverlay \
+    JapaneseSignalOverlay \
+    KoalaSignalOverlay \
+    LineDotSignalOverlay \
+    LinealSignalOverlay \
+    LinearSignalOverlay \
+    MicroWaveSignalOverlay \
+    MiniSignalOverlay \
+    NinjaSignalOverlay \
+    NothingDotSignalOverlay \
+    NumberSignalOverlay \
+    OdinSignalOverlay \
+    PillsSignalOverlay \
+    PlumpySignalOverlay \
+    ROGSignalOverlay \
+    RelSignalOverlay \
+    RomanSignalOverlay \
+    RoundSignalOverlay \
+    RouterSignalOverlay \
+    ScaleSignalOverlay \
+    ScrollSignalOverlay \
+    SeaSignalOverlay \
+    SharpSignalOverlay \
+    SleekSignalOverlay \
+    SneakySignalOverlay \
+    SpiralSignalOverlay \
+    StackSignalOverlay \
+    StrokeSignalOverlay \
+    TowerSignalOverlay \
+    WaffleSignalOverlay \
+    WannuiSignalOverlay \
+    WavySignalOverlay \
+    WindowsSignalOverlay \
+    WindySignalOverlay \
+    WingSignalOverlay \
+    XperiaSignalOverlay \
+    ZigZagSignalOverlay
+
+# WiFi Icons
+PRODUCT_PACKAGES += \
+    AiirOWiFiOverlay \
+    AuroraWiFiOverlay \
+    BarsWiFiOverlay \
+    BoldWiFiOverlay \
+    CapsuleWiFiOverlay \
+    DoraWiFiOverlay \
+    FaintUIWiFiOverlay \
+    ForlornWiFiOverlay \
+    GlummyWiFiOverlay \
+    GradiconWiFiOverlay \
+    HollowWiFiOverlay \
+    InsideWiFiOverlay \
+    IosWiFiOverlay \
+    JapaneseWiFiOverlay \
+    KoalaWiFiOverlay \
+    LandscapeWiFiOverlay \
+    LineDotWiFiOverlay \
+    LinealWiFiOverlay \
+    LinearWiFiOverlay \
+    MicroWaveWiFiOverlay \
+    NothingDotWiFiOverlay \
+    NumberWiFiOverlay \
+    PlumpyWiFiOverlay \
+    RoundWiFiOverlay \
+    RouterWiFiOverlay \
+    ScaleWiFiOverlay \
+    SharpWiFiOverlay \
+    SneakyWiFiOverlay \
+    SpiralWiFiOverlay \
+    StrokeWiFiOverlay \
+    TowerWiFiOverlay \
+    WaffleWiFiOverlay \
+    WavyWiFiOverlay \
+    WeedWiFiOverlay \
+    WindyWiFiOverlay \
+    XperiaWiFiOverlay \
+    ZigZagWiFiOverlay
 
 # Brightness slider styles
 PRODUCT_PACKAGES += \
@@ -312,13 +430,17 @@ PRODUCT_PACKAGES += \
     BrightnessSliderBangOverlay \
     BrightnessSliderCyberpunkOverlay \
     BrightnessSliderFilledOverlay \
-    BrightnessSliderGradientRoundedBarOverlay \
+    BrightnessSliderGradiantOverlay \
     BrightnessSliderLeafyOutlineOverlay \
+    BrightnessSliderLightyOverlay \
+    BrightnessSliderLineOverlay \
     BrightnessSliderMinimalThumbOverlay \
+    BrightnessSliderNeumorphOverlay \
+    BrightnessSliderOldSchoolThumbOverlay \
     BrightnessSliderOutlineOverlay \
     BrightnessSliderRoundedClipOverlay \
-    BrightnessSliderShadedOverlay \
     BrightnessSliderThinOverlay \
+    BrightnessSliderThumbSliderOverlay \
     BrightnessSliderTranslucentOverlay
 
 # Navbar
@@ -331,8 +453,9 @@ PRODUCT_PACKAGES += \
 # Navbar styles
 PRODUCT_PACKAGES += \
     NavbarAndroidOverlay \
-	NavbarAsusOverlay \
-	NavbarDoraOverlay \
+    NavbarAsusOverlay \
+    NavbarDoraOverlay \
+    NavbarRisingOverlay \
     NavbarMotoOverlay \
     NavbarNexusOverlay \
     NavbarOldOverlay \
@@ -354,68 +477,42 @@ PRODUCT_PACKAGES += \
     QSSurround \
     QSThin
 
-# Signal Icons
+# Progress Bar Themes
 PRODUCT_PACKAGES += \
-    AquariumSignalOverlay \
-    BarsSignalOverlay \
-    ButterflySignalOverlay \
-    CircleSignalOverlay \
-    DaunSignalOverlay \
-    DecSignalOverlay \
-    DeepSignalOverlay \
-    DoraSignalOverlay \
-    EqualSignalOverlay \
-    FanSignalOverlay \
-    GradiconSignalOverlay \
-    HuaweiSignalOverlay \
-    InsideSignalOverlay \
-    IosSignalOverlay \
-    MiniSignalOverlay \
-    NothingDotSignalOverlay \
-    OdinSignalOverlay \
-    PillsSignalOverlay \
-    RelSignalOverlay \
-    RomanSignalOverlay \
-    RoundSignalOverlay \
-    ScrollSignalOverlay \
-    SeaSignalOverlay \
-    SneakySignalOverlay \
-    StackSignalOverlay \
-    StrokeSignalOverlay \
-    WannuiSignalOverlay \
-    WavySignalOverlay \
-    WindowsSignalOverlay \
-    WingSignalOverlay \
-    XperiaSignalOverlay \
-    ZigZagSignalOverlay \
-	AuroraSignalOverlay \
-	FaintUISignalOverlay \
-	ForlornSignalOverlay \
-	PlumpySignalOverlay
+    PGB_BlockyThumb \
+    PGB_MinimalThumb \
+    PGB_OutlineThumb \
+    PGB_Shishu
 
-# WiFi Icons
+# Notification Themes
 PRODUCT_PACKAGES += \
-    BarsWiFiOverlay \
-    DoraWiFiOverlay \
-    GradiconWiFiOverlay \
-    InsideWiFiOverlay \
-    NothingDotWiFiOverlay \
-    RoundWiFiOverlay \
-    SneakyWiFiOverlay \
-    StrokeWiFiOverlay \
-    WavyWiFiOverlay \
-    WeedWiFiOverlay \
-    XperiaWiFiOverlay \
-    ZigZagWiFiOverlay \
-	AuroraWiFiOverlay \
-	FaintUIWiFiOverlay \
-	ForlornWiFiOverlay \
-	PlumpyWiFiOverlay
+    NotifCyberPunk \
+    NotifDuoline \
+    NotifFluid \
+    NotifIOS \
+    NotifLayers
+
+# Power Menu Themes
+PRODUCT_PACKAGES += \
+    PowerCyberPunk \
+    PowerDuoline \
+    PowerIOS \
+    PowerLayers
+
+# BetterQS
+PRODUCT_PACKAGES += \
+    BetterQS
 
 # Themes
 PRODUCT_PACKAGES += \
-    AndroidBlackThemeOverlay \
-    AndroidAmoledBlackThemeOverlay
+    AndroidBlackThemeOverlay
+
+# Udfps
+ifeq ($(TARGET_HAS_UDFPS),true)
+PRODUCT_PACKAGES += \
+    UdfpsAnimations \
+    UdfpsIcons
+endif
 
 # Utility Overlays
 PRODUCT_PACKAGES += \
@@ -430,39 +527,13 @@ PRODUCT_PACKAGES += \
     VolumeNeumorph \
     VolumeNeumorphOutline \
     VolumeOutline \
-    VolumeShadedLayer \
-    VolumeAOSPRevamped
-    
+    VolumeShadedLayer
+
 # Hide IME space
 PRODUCT_PACKAGES += \
     GesturalNavigationNarrowSpace \
     GesturalNavigationNoSpace \
     GesturalNavigationHidden
-
-# Progress Bar Themes
-PRODUCT_PACKAGES += \
-    PGB_BlockyThumb \
-    PGB_MinimalThumb \
-    PGB_OutlineThumb \
-    PGB_Shishu
-
-# Notification Themes
-PRODUCT_PACKAGES += \
-    NotifCyberPunk \
-    NotifDuoline \
-    NotifIOS \
-    NotifLayers
-
-# Power Menu Themes
-PRODUCT_PACKAGES += \
-    PowerCyberPunk \
-    PowerDuoline \
-    PowerIOS \
-    PowerLayers
-
-# BetterQS
-PRODUCT_PACKAGES += \
-    BetterQS
 
 # Lawnchair
 ifeq ($(strip $(TARGET_PREBUILT_LAWNCHAIR_LAUNCHER)),true)
@@ -487,19 +558,10 @@ PRODUCT_PACKAGES += \
     Bcr
 endif
 
-# SystemUI Clocks
-PRODUCT_PACKAGES += \
-    SystemUIClocks-BigNum \
-    SystemUIClocks-Calligraphy \
-    SystemUIClocks-Flex \
-    SystemUIClocks-Growth \
-    SystemUIClocks-Inflate \
-    SystemUIClocks-Metro \
-    SystemUIClocks-NumOverlap
-
 # Include {Lato,Rubik} fonts
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/addons/prebuilt/product/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)
+    $(call find-copy-subdir-files,*,vendor/addons/prebuilt/product/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    $(call find-copy-subdir-files,*,vendor/addons/prebuilt/product/media/audio/ui,$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui)
