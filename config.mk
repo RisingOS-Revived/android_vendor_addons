@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     FontGrandHotelOverlay \
     FontGeneralSansOverlay \
     FontHarmonySansOverlay \
+    FontIBMPlexSansOverlay \
     FontLatoOverlay \
     FontLinotteOverlay \
     FontNokiaPureOverlay \
