@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # Clocks (SystemUI)
+ifeq ($(WITH_GMS),true)
 PRODUCT_PACKAGES += \
     SystemUIClocks-BigNum \
     SystemUIClocks-Calligraphy \
@@ -36,7 +37,16 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Metro \
     SystemUIClocks-NumOverlap \
     SystemUIClocks-Weather
-
+else
+PRODUCT_PACKAGES += \
+    SystemUIClocks-BigNum \
+    SystemUIClocks-Calligraphy \
+    SystemUIClocks-Flex \
+    SystemUIClocks-Growth \
+    SystemUIClocks-Inflate \
+    SystemUIClocks-Metro \
+    SystemUIClocks-NumOverlap
+endif
 
 # QS layout
 PRODUCT_PACKAGES += \
