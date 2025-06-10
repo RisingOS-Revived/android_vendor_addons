@@ -461,7 +461,7 @@ PRODUCT_PACKAGES += \
     GesturalNavigationOverlayHiddenNarrow
 
 # Navbar styles
-ifeq ($(WITH_GMS),true)
+ifeq ($(TARGET_DEFAULT_PIXEL_LAUNCHER),true)
 PRODUCT_PACKAGES += \
     NavbarAndroidPixelLauncherOverlay \
     NavbarAsusPixelLauncherOverlay \
@@ -473,7 +473,18 @@ PRODUCT_PACKAGES += \
     NavbarOnePlusPixelLauncherOverlay \
     NavbarOneUiPixelLauncherOverlay \
     NavbarSammyPixelLauncherOverlay \
-    NavbarTecnoCamonPixelLauncherOverlay
+    NavbarTecnoCamonPixelLauncherOverlay \
+    NavbarAndroidOverlay \
+    NavbarAsusOverlay \
+    NavbarDoraOverlay \
+    NavbarRisingOverlay \
+    NavbarMotoOverlay \
+    NavbarNexusOverlay \
+    NavbarOldOverlay \
+    NavbarOnePlusOverlay \
+    NavbarOneUiOverlay \
+    NavbarSammyOverlay \
+    NavbarTecnoCamonOverlay
 else
 PRODUCT_PACKAGES += \
     NavbarAndroidOverlay \
