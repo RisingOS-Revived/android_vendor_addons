@@ -224,6 +224,7 @@ PRODUCT_PACKAGES += \
     FontSansSerifOverlay \
     FontSansSerifProOverlay \
     FontSonySketchOverlay \
+    FontSpaceGroteskOverlay \
     FontStoropiaOverlay \
     FontSurferOverlay \
     FontUbuntuOverlay \
