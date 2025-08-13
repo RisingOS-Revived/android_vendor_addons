@@ -549,7 +549,12 @@ PRODUCT_PACKAGES += \
     GesturalNavigationNoSpace \
     GesturalNavigationHidden
 
+ifeq ($(strip $(WITH_GMS)),false)
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+endif
+
 # Lawnchair
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER ?= true
 ifeq ($(strip $(TARGET_PREBUILT_LAWNCHAIR_LAUNCHER)),true)
 PRODUCT_PACKAGES += \
     Lawnchair \
@@ -559,7 +564,7 @@ PRODUCT_PACKAGES += \
 # Lawnchair Launcher
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.quickswitch_lawnchair_shipped=1
-else 
+else
 # Lawnchair Launcher
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.quickswitch_lawnchair_shipped=0
