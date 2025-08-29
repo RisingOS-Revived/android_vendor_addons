@@ -17,30 +17,30 @@
 
 <resources>
     <color name="system_neutral1_0">#FFFFFF</color>
-    <color name="system_neutral1_10">#FFFFFF</color>
+    <color name="system_neutral1_10">#E3E3E3</color>
     <color name="system_neutral1_50">@android:color/system_accent2_50</color>
     <color name="system_neutral1_100">@android:color/system_accent1_50</color>
     <color name="system_neutral1_200">@android:color/system_accent1_50</color>
     <color name="system_neutral1_300">@android:color/system_accent1_50</color>
     <color name="system_neutral1_400">@android:color/system_accent1_100</color>
-    <color name="system_neutral1_500">#242424</color>
-    <color name="system_neutral1_600">#212121</color>
-    <color name="system_neutral1_700">#141414</color>
-    <color name="system_neutral1_800">#111111</color>
+    <color name="system_neutral1_500">#3A3A3A</color>
+    <color name="system_neutral1_600">#2E2E2E</color>
+    <color name="system_neutral1_700">#242424</color>
+    <color name="system_neutral1_800">#1A1A1A</color>
     <color name="system_neutral1_900">#000000</color>
     <color name="system_neutral1_1000">#000000</color>
 
     <color name="system_neutral2_0">#FFFFFF</color>
-    <color name="system_neutral2_10">#FFFFFF</color>
+    <color name="system_neutral2_10">#E3E3E3</color>
     <color name="system_neutral2_50">@android:color/system_accent2_50</color>
     <color name="system_neutral2_100">@android:color/system_accent1_50</color>
     <color name="system_neutral2_200">@android:color/system_accent2_100</color>
     <color name="system_neutral2_300">@android:color/system_accent2_200</color>
     <color name="system_neutral2_400">@android:color/system_accent2_300</color>
-    <color name="system_neutral2_500">#242424</color>
-    <color name="system_neutral2_600">#212121</color>
-    <color name="system_neutral2_700">#141414</color>
-    <color name="system_neutral2_800">#111111</color>
+    <color name="system_neutral2_500">#3A3A3A</color>
+    <color name="system_neutral2_600">#2E2E2E</color>
+    <color name="system_neutral2_700">#242424</color>
+    <color name="system_neutral2_800">#1A1A1A</color>
     <color name="system_neutral2_900">#000000</color>
     <color name="system_neutral2_1000">#000000</color>
 
@@ -48,17 +48,18 @@
     <color name="system_accent2_1000">#000000</color>
     <color name="system_accent3_1000">#000000</color>
 
-    <color name="background_device_default_dark">#000000</color>
-    <color name="primary_dark_device_default_dark">#000000</color>
-    <color name="primary_dark_device_default_settings">#000000</color>
-    <color name="primary_device_default_dark">#000000</color>
-    <color name="primary_device_default_settings">#000000</color>
+    <color name="background_device_default_dark">#121212</color>
 
-    <color name="system_surface_bright_dark">#171717</color>
-    <color name="system_surface_container_dark">#000000</color>
-    <color name="system_surface_container_high_dark">#171717</color>
+    <color name="primary_dark_device_default_dark">#1F1F1F</color>
+    <color name="primary_dark_device_default_settings">#1F1F1F</color>
+    <color name="primary_device_default_dark">#1F1F1F</color>
+    <color name="primary_device_default_settings">#1F1F1F</color>
+
+    <color name="system_surface_bright_dark">#2D2D2D</color>
+    <color name="system_surface_container_dark">#222222</color>
+    <color name="system_surface_container_high_dark">#1A1A1A</color>
     <color name="system_surface_container_highest_dark">#191919</color>
-    <color name="system_surface_container_low_dark">#000000</color>
-    <color name="system_surface_container_lowest_dark">#000000</color>
-    <color name="system_surface_dim_dark">#000000</color>
+    <color name="system_surface_container_low_dark">#121212</color>
+    <color name="system_surface_container_lowest_dark">#121212</color>
+    <color name="system_surface_dim_dark">#121212</color>
 </resources>
