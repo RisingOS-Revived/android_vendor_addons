@@ -93,6 +93,8 @@ PRODUCT_PACKAGES += \
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
+    fonts_customization_emoji_ios.xml \
+    fonts_customization_emoji_samsung.xml \
     ClockFontACFilmstripOverlay \
     ClockFontAccuratistOverlay \
     ClockFontAclonicaOverlay \
@@ -601,3 +603,6 @@ $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/addons/prebuilt/product/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
     $(call find-copy-subdir-files,*,vendor/addons/prebuilt/product/media/audio/ui,$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui)
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.ax_emoji_style=android
