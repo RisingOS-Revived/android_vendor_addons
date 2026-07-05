@@ -37,59 +37,6 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-NumOverlap \
     SystemUIClocks-Weather
 
-# QS layout
-PRODUCT_PACKAGES += \
-	qs_portrait_2x2 \
-	qs_portrait_2x3 \
-	qs_portrait_2x4 \
-	qs_portrait_2x5 \
-	qs_portrait_2x6 \
-	qs_portrait_3x2 \
-	qs_portrait_3x3 \
-	qs_portrait_3x4 \
-	qs_portrait_3x5 \
-	qs_portrait_3x6 \
-	qs_portrait_4x2 \
-	qs_portrait_4x3 \
-	qs_portrait_4x4 \
-	qs_portrait_4x5 \
-	qs_portrait_4x6 \
-	qs_portrait_5x2 \
-	qs_portrait_5x3 \
-	qs_portrait_5x4 \
-	qs_portrait_5x5 \
-	qs_portrait_5x6 \
-	qs_portrait_6x2 \
-	qs_portrait_6x3 \
-	qs_portrait_6x4 \
-	qs_portrait_6x5 \
-	qs_portrait_6x6 \
-	qqs_portrait_1x2 \
-	qqs_portrait_1x3 \
-	qqs_portrait_1x4 \
-	qqs_portrait_1x5 \
-	qqs_portrait_1x6 \
-	qqs_portrait_2x2 \
-	qqs_portrait_2x3 \
-	qqs_portrait_2x4 \
-	qqs_portrait_2x5 \
-	qqs_portrait_2x6 \
-	qqs_portrait_3x2 \
-	qqs_portrait_3x3 \
-	qqs_portrait_3x4 \
-	qqs_portrait_3x5 \
-	qqs_portrait_3x6 \
-	qqs_portrait_4x2 \
-	qqs_portrait_4x3 \
-	qqs_portrait_4x4 \
-	qqs_portrait_4x5 \
-	qqs_portrait_4x6 \
-	qqs_portrait_5x2 \
-	qqs_portrait_5x3 \
-	qqs_portrait_5x4 \
-	qqs_portrait_5x5 \
-	qqs_portrait_5x6
-
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
@@ -437,25 +384,6 @@ PRODUCT_PACKAGES += \
     XperiaWiFiOverlay \
     ZigZagWiFiOverlay
 
-# Brightness slider styles
-PRODUCT_PACKAGES += \
-    BrightnessSliderAcunOverlay \
-    BrightnessSliderBangOverlay \
-    BrightnessSliderCyberpunkOverlay \
-    BrightnessSliderFilledOverlay \
-    BrightnessSliderGradiantOverlay \
-    BrightnessSliderLeafyOutlineOverlay \
-    BrightnessSliderLightyOverlay \
-    BrightnessSliderLineOverlay \
-    BrightnessSliderMinimalThumbOverlay \
-    BrightnessSliderNeumorphOverlay \
-    BrightnessSliderOldSchoolThumbOverlay \
-    BrightnessSliderOutlineOverlay \
-    BrightnessSliderRoundedClipOverlay \
-    BrightnessSliderThinOverlay \
-    BrightnessSliderThumbSliderOverlay \
-    BrightnessSliderTranslucentOverlay
-
 # Navbar
 PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
@@ -492,46 +420,6 @@ PRODUCT_PACKAGES += \
     NavbarTecnoCamonOverlay
 endif
 
-# QS UI Style
-PRODUCT_PACKAGES += \
-    A11QSUI \
-    QSOutline \
-    QSTwoToneAccent \
-    QSTwoToneAccentTrans \
-    QSShaded \
-    QSCyberPunk \
-    QSNeumorph \
-    QSReflected \
-    QSSurround \
-    QSThin
-
-# Progress Bar Themes
-PRODUCT_PACKAGES += \
-    PGB_BlockyThumb \
-    PGB_MinimalThumb \
-    PGB_OutlineThumb \
-    PGB_Shishu
-
-# Notification Themes
-PRODUCT_PACKAGES += \
-    NotifCyberPunk \
-    NotifDuoline \
-    NotifFluid \
-    NotifIOS \
-    NotifLayers
-
-# Power Menu Themes
-PRODUCT_PACKAGES += \
-    PowerCyberPunk \
-    PowerDuoline \
-    PowerFluid \
-    PowerIOS \
-    PowerLayers
-
-# BetterQS
-PRODUCT_PACKAGES += \
-    BetterQS
-
 # Themes
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay
@@ -546,17 +434,7 @@ endif
 # Utility Overlays
 PRODUCT_PACKAGES += \
     HideSmartSpace \
-    SmartSpaceOffset \
-    HideClock
-
-# Volume Styles
-PRODUCT_PACKAGES += \
-    VolumeDoubleLayer \
-    VolumeGradient \
-    VolumeNeumorph \
-    VolumeNeumorphOutline \
-    VolumeOutline \
-    VolumeShadedLayer
+    SmartSpaceOffset
 
 # Hide IME space
 PRODUCT_PACKAGES += \
@@ -588,10 +466,6 @@ endif
 # Aod wallpaper
 PRODUCT_PACKAGES += \
     AODWALL
-
-# Partial screenshot
-PRODUCT_PACKAGES += \
-    ScreenshotEditor
 
 # Include {Lato,Rubik} fonts
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
