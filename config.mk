@@ -37,59 +37,6 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-NumOverlap \
     SystemUIClocks-Weather
 
-# QS layout
-PRODUCT_PACKAGES += \
-	qs_portrait_2x2 \
-	qs_portrait_2x3 \
-	qs_portrait_2x4 \
-	qs_portrait_2x5 \
-	qs_portrait_2x6 \
-	qs_portrait_3x2 \
-	qs_portrait_3x3 \
-	qs_portrait_3x4 \
-	qs_portrait_3x5 \
-	qs_portrait_3x6 \
-	qs_portrait_4x2 \
-	qs_portrait_4x3 \
-	qs_portrait_4x4 \
-	qs_portrait_4x5 \
-	qs_portrait_4x6 \
-	qs_portrait_5x2 \
-	qs_portrait_5x3 \
-	qs_portrait_5x4 \
-	qs_portrait_5x5 \
-	qs_portrait_5x6 \
-	qs_portrait_6x2 \
-	qs_portrait_6x3 \
-	qs_portrait_6x4 \
-	qs_portrait_6x5 \
-	qs_portrait_6x6 \
-	qqs_portrait_1x2 \
-	qqs_portrait_1x3 \
-	qqs_portrait_1x4 \
-	qqs_portrait_1x5 \
-	qqs_portrait_1x6 \
-	qqs_portrait_2x2 \
-	qqs_portrait_2x3 \
-	qqs_portrait_2x4 \
-	qqs_portrait_2x5 \
-	qqs_portrait_2x6 \
-	qqs_portrait_3x2 \
-	qqs_portrait_3x3 \
-	qqs_portrait_3x4 \
-	qqs_portrait_3x5 \
-	qqs_portrait_3x6 \
-	qqs_portrait_4x2 \
-	qqs_portrait_4x3 \
-	qqs_portrait_4x4 \
-	qqs_portrait_4x5 \
-	qqs_portrait_4x6 \
-	qqs_portrait_5x2 \
-	qqs_portrait_5x3 \
-	qqs_portrait_5x4 \
-	qqs_portrait_5x5 \
-	qqs_portrait_5x6
-
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
@@ -505,29 +452,6 @@ PRODUCT_PACKAGES += \
     QSSurround \
     QSThin
 
-# Progress Bar Themes
-PRODUCT_PACKAGES += \
-    PGB_BlockyThumb \
-    PGB_MinimalThumb \
-    PGB_OutlineThumb \
-    PGB_Shishu
-
-# Notification Themes
-PRODUCT_PACKAGES += \
-    NotifCyberPunk \
-    NotifDuoline \
-    NotifFluid \
-    NotifIOS \
-    NotifLayers
-
-# Power Menu Themes
-PRODUCT_PACKAGES += \
-    PowerCyberPunk \
-    PowerDuoline \
-    PowerFluid \
-    PowerIOS \
-    PowerLayers
-
 # BetterQS
 PRODUCT_PACKAGES += \
     BetterQS
@@ -536,27 +460,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay
 
-# Udfps
-ifeq ($(TARGET_HAS_UDFPS),true)
-PRODUCT_PACKAGES += \
-    UdfpsAnimations \
-    UdfpsIcons
-endif
-
 # Utility Overlays
 PRODUCT_PACKAGES += \
     HideSmartSpace \
     SmartSpaceOffset \
     HideClock
-
-# Volume Styles
-PRODUCT_PACKAGES += \
-    VolumeDoubleLayer \
-    VolumeGradient \
-    VolumeNeumorph \
-    VolumeNeumorphOutline \
-    VolumeOutline \
-    VolumeShadedLayer
 
 # Hide IME space
 PRODUCT_PACKAGES += \
