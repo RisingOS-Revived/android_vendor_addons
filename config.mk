@@ -19,11 +19,11 @@ ADDONS_PATH := vendor/addons
 # Game Props
 TARGET_PRODUCT_PROP += $(ADDONS_PATH)/gameprops/product.prop
 
-# Accord
-TARGET_INCLUDE_ACCORD ?= true
-ifeq ($(TARGET_INCLUDE_ACCORD),true)
+# Gramophone
+TARGET_INCLUDE_GRAMOPHONE ?= false
+ifeq ($(TARGET_INCLUDE_GRAMOPHONE),true)
 PRODUCT_PACKAGES += \
-    Accord
+    Gramophone
 endif
 
 # Clocks (SystemUI)

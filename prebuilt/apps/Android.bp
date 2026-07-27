@@ -1,7 +1,8 @@
 android_app_import {
-    name: "Accord",
-    apk: "accord/accord.apk",
-    certificate: "platform",
+    name: "Gramophone",
+    apk: "Gramophone.apk",
+    presigned: true,
+    preprocessed: true,
     product_specific: true,
     overrides: [
         "Twelve",
