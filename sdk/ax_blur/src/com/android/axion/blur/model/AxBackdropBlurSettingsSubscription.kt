@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.axion.blur.settings
+package com.android.axion.blur.model
 
 internal interface AxBackdropBlurSettingsSubscription {
     fun start()

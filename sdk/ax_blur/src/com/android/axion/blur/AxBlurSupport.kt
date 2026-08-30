@@ -35,6 +35,4 @@ internal object AxBlurSupport {
             false
         }
     }
-
-    fun isBlurDisabled(): Boolean = AxBlurProperties.disableBlur
 }

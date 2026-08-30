@@ -16,4 +16,5 @@
 
 package com.android.axion.blur
 
+internal const val AX_BACKDROP_BLUR_RADIUS_DP = 34f
 internal const val AX_BLUR_SURFACE_ALPHA = 0x8A
