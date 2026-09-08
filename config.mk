@@ -439,6 +439,7 @@ PRODUCT_PACKAGES += \
 
 # Hide IME space
 PRODUCT_PACKAGES += \
+    ImeNavBarSpaceOverlay \
     GesturalNavigationNarrowSpace \
     GesturalNavigationNoSpace \
     GesturalNavigationHidden
