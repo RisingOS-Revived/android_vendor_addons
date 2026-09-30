@@ -26,17 +26,6 @@ PRODUCT_PACKAGES += \
     Gramophone
 endif
 
-# Clocks (SystemUI)
-PRODUCT_PACKAGES += \
-    SystemUIClocks-BigNum \
-    SystemUIClocks-Calligraphy \
-    SystemUIClocks-Flex \
-    SystemUIClocks-Growth \
-    SystemUIClocks-Inflate \
-    SystemUIClocks-Metro \
-    SystemUIClocks-NumOverlap \
-    SystemUIClocks-Weather
-
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
