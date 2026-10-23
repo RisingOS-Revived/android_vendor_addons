@@ -109,7 +109,6 @@ PRODUCT_PACKAGES += \
     ClockFontRoundheadsOverlay \
     ClockFontRubikOverlay \
     ClockFontSamsungOneOverlay \
-    ClockFontSansSerifOverlay \
     ClockFontScrapItUpOverlay \
     ClockFontSonySketchOverlay \
     ClockFontSpaceGameOverlay \
@@ -176,8 +175,6 @@ PRODUCT_PACKAGES += \
     FontSamsungOneOverlay \
     FontOhMyFontOverlay \
     FontSanFranciscoDisplayProSourceOverlay \
-    FontSansSerifOverlay \
-    FontSansSerifProOverlay \
     FontSonySketchOverlay \
     FontSpaceGroteskOverlay \
     FontStoropiaOverlay \
