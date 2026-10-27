@@ -146,7 +146,6 @@ PRODUCT_PACKAGES += \
     FontFifa2018Overlay \
     FontGrandHotelOverlay \
     FontGeneralSansOverlay \
-    FontGoogleSansFlexOverlay \
     FontHarmonySansOverlay \
     FontIBMPlexSansOverlay \
     FontLatoOverlay \
@@ -467,9 +466,10 @@ endif
 PRODUCT_PACKAGES += \
     AODWALL
 
-# Include {Lato,Rubik} fonts
+# Include {Lato,Rubik,GoogleSansFlex} fonts
 $(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
 $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/google-sans-flex/fonts.mk)
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/addons/prebuilt/product/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
