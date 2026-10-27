@@ -88,7 +88,6 @@ PRODUCT_PACKAGES += \
     ClockFontNeonDiscoOverlay \
     ClockFontNinjasOverlay \
     ClockFontNokiaPureOverlay \
-    ClockFontNothingDotHeadlineOverlay \
     ClockFontNunitoOverlay \
     ClockFontOneplusSansOverlay \
     ClockFontOneplusSlateOverlay \
@@ -152,7 +151,6 @@ PRODUCT_PACKAGES += \
     FontLinotteOverlay \
     FontMercyOverlay \
     FontNokiaPureOverlay \
-    FontNothingDotHeadlineOverlay \
     FontNothingDotOverlay \
     FontNunitoOverlay \
     FontOneUISansOverlay \
