@@ -433,7 +433,6 @@ endif
 # Utility Overlays
 PRODUCT_PACKAGES += \
     Launcher3NoGestureHintOverlay \
-    HideSmartSpace \
     SmartSpaceOffset
 
 # Hide IME space
